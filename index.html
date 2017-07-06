@@ -43,8 +43,7 @@ function getLocation() {
 function getWeather(position) {
     console.info('position', position);
     
-    getJSON('http://api.wunderground.com/api/' + wundergroundKey + '/conditions/forecast/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json',
-    // getJSON('http://api.wunderground.com/api/96de6938d4ddb24b/geolookup/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json',
+    getJSON('https://api.wunderground.com/api/' + wundergroundKey + '/conditions/forecast/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json',
         function(err, data) {
             if (err == null) {
                 console.info('data', data);
