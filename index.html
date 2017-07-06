@@ -52,7 +52,7 @@ function getWeather(position) {
                 weather.innerHTML = 'Weather: ' + data.current_observation.weather +
                     '<br>Temperature: ' + data.current_observation.temp_c + ' C' +
                     '<br>Humidity: ' + data.current_observation.relative_humidity +
-                    '<br>Icon: <img src="' + data.current_observation.icon_url + '" alt="' + data.current_observation.icon + '" />';
+                    '<br>Icon: <img src="' + data.current_observation.icon_url.replace('http://','https://') + '" alt="' + data.current_observation.icon + '" />';
             } else {
                 loc.innerHTML = 'Getting weather from API - something went wrong: ' + err;
             }
